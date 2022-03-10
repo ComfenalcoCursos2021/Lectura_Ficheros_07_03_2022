@@ -1,11 +1,32 @@
 <?php
   header("Content-Type: application/json");
-  $jsonString = (string) '{"nombre":"Miguel Angel Castro Escamilla","edad":24,"altura":1.63,"profesor":true,"pasatiempos":["Cocino","Programo"],"infomacion":{"Dirrecion":"Calle","Numero":11},"Animal":[{"Nombre":"Coco","Especie":"Canino"},{"Nombre":"Neko","Especie":"Gato","Raza":true},{"Nombre":"pedro","Especie":"Raton"}]}';
-  $decodificar = json_decode($jsonString);
-  //var_dump($decodificar->Animal[3]->Nombre); // default
-  //var_dump($decodificar["Animal"][2]["Nombre"]); //true
-  $codificar = json_encode($decodificar,JSON_PRETTY_PRINT);
   
+  $data = (object) [];
+  $data->nombre = (string) "Miguel Angel Castro Escamilla";
+  $data->edad = (int) 24;
+  $data->altura = (float) 1.63;
+  $data->profesor = (bool) true;
+  $data->pasatiempos = (array) [
+    (string) "Cocino",
+    (string) "Programo"
+  ];
+  $data->infomacion = (array) [
+    (object) [
+      "Nombre" => (string) "Coco", 
+      "Especie" => (string) "Canino"
+    ],
+    (object) [
+      "Nombre" => (string) "Neko", 
+      "Especie" => (string) "Gato",
+      "Raza" => (bool) true
+    ],
+    (object) [
+      "Nombre" => (string) "pedro", 
+      "Especie" => (string) "Raton"
+    ],
+  ];
+
+  $codificar = json_encode($data, JSON_PRETTY_PRINT);
 
 
   $file = fopen("datos.json", "w+");

@@ -7,11 +7,7 @@
         "Cocino",
         "Programo"
     ],
-    "infomacion": {
-        "Dirrecion": "Calle",
-        "Numero": 11
-    },
-    "Animal": [
+    "infomacion": [
         {
             "Nombre": "Coco",
             "Especie": "Canino"
