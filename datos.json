@@ -1,0 +1,29 @@
+{
+    "nombre": "Miguel Angel Castro Escamilla",
+    "edad": 24,
+    "altura": 1.63,
+    "profesor": true,
+    "pasatiempos": [
+        "Cocino",
+        "Programo"
+    ],
+    "infomacion": {
+        "Dirrecion": "Calle",
+        "Numero": 11
+    },
+    "Animal": [
+        {
+            "Nombre": "Coco",
+            "Especie": "Canino"
+        },
+        {
+            "Nombre": "Neko",
+            "Especie": "Gato",
+            "Raza": true
+        },
+        {
+            "Nombre": "pedro",
+            "Especie": "Raton"
+        }
+    ]
+}
